@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Docker Installation Script
-# Usage: curl -fsSL https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/install-docker.sh | bash
 
 set -e
 
