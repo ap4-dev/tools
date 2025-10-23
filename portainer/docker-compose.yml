@@ -1,0 +1,23 @@
+services:
+  portainer_agent:
+    # Imagen a usar, igual que en tu comando
+    image: portainer/agent:2.33.1
+    
+    # Mapeo de puertos: -p 9001:9001
+    ports:
+      - "9001:9001"
+      
+    # Nombre del contenedor: --name portainer_agent
+    container_name: portainer_agent
+    
+    # Política de reinicio: --restart=always
+    restart: always
+    
+    # Mapeo de volúmenes: -v ...
+    volumes:
+      # Acceso al socket de Docker
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Acceso a los volúmenes de Docker (esencial para la gestión de volúmenes)
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      # Acceso al sistema de archivos del host (esencial para la gestión del host)
+      - /:/host
