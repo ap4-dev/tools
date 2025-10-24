@@ -4,4 +4,9 @@ Se generan scipts para instalaciones:
         -curl -o- https://raw.githubusercontent.com/ap4-dev/tools/refs/heads/main/install-docker.sh | bash
 
     -Descargar servicio para deployar con docker-compose
-        curl -o- https://raw.githubusercontent.com/ap4-dev/tools/refs/heads/main/install-service.sh | bash -s -- npm
+        curl -o- https://raw.githubusercontent.com/ap4-dev/tools/refs/heads/main/install-service.sh | bash -s -- {{servicio}}
+
+    -Servicios Actuales:
+        -Ngnix Proxy Manager: npm
+        -Portainer: portainer
+        -WireguardUI: wg-ui
